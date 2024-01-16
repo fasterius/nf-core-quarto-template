@@ -22,12 +22,10 @@ ggplot(penguins, aes(x      = bill_length_mm,
     theme_bw()
 ```
 
-# Another section
+## A subsection with a table
 
 Some text with `inline code` and a
 [link](https://quarto.org/docs/output-formats/html-basics.html).
-
-# A section with a table
 
 ```{r}
 #| tbl-cap: A table
@@ -39,5 +37,11 @@ penguins[1:20, ]
 If you want to write something with _e.g._ the [nf-core green]{.green} you can
 use `[text to colour]{.green}`. Other available colours are [blue]{.blue},
 [red]{.red}, [yellow]{.yellow} and [grey]{.grey}. The hex values for these
-colours are `#24B064`, `#3073AF`, `#E0191A`, `#E9D77B` and `#B2B2B2`,
+colours are `#24B064`, `#3073AF`, `#E0191A`, `#DABC25` and `#B2B2B2`,
 respectively.
+
+# Font
+
+The font used is the [Maven Pro Google
+font](https://fonts.google.com/specimen/Maven+Pro), as per the [nf-core graphic
+design guidelines](https://nf-co.re/docs/contributing/design_guidelines).
