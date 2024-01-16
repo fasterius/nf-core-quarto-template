@@ -1,0 +1,43 @@
+---
+title: A nf-core Quarto notebook
+author: Name Surname
+date: last-modified
+format:
+    nf-core-html: default
+---
+
+# A section with a plot
+
+```{r}
+#| warning: false
+library("ggplot2")
+library("palmerpenguins")
+data(penguins)
+ggplot(penguins, aes(x      = bill_length_mm,
+                     y      = bill_depth_mm,
+                     colour = species)) +
+    geom_point() +
+    labs(colour = 'Species') +
+    scale_colour_manual(values = c('#24B064', '#3073AF', '#E0191A')) +
+    theme_bw()
+```
+
+# Another section
+
+Some text with `inline code` and a
+[link](https://quarto.org/docs/output-formats/html-basics.html).
+
+# A section with a table
+
+```{r}
+#| tbl-cap: A table
+penguins[1:20, ]
+```
+
+# Colours
+
+If you want to write something with _e.g._ the [nf-core green]{.green} you can
+use `[text to colour]{.green}`. Other available colours are [blue]{.blue},
+[red]{.red}, [yellow]{.yellow} and [grey]{.grey}. The hex values for these
+colours are `#24B064`, `#3073AF`, `#E0191A`, `#E9D77B` and `#B2B2B2`,
+respectively.
